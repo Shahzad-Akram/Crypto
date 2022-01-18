@@ -47,7 +47,7 @@ const GlobalStyles = createGlobalStyle`
     border-bottom: 2px solid #8364e2;
   }
   .jumbotron.no-bg{
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     background-repeat: repeat;
     background-size: cover;
@@ -167,14 +167,14 @@ const homeone = () => (
   <div>
     <GlobalStyles />
     <section
-      className="jumbotron no-bg"
+      className="jumbotron no-bg position-relative"
       style={{ backgroundImage: `url(${"./img/background/8.jpg"})` }}
     >
       <Particle />
       <SliderMainParticle />
     </section>
-
-    <section className="container no-bottom">
+    {/* 
+    <section className="container no-bottom position-relative">
       <div className="row">
         <div className="col-lg-2 col-sm-4 col-6 mb30">
           <span className="box-url">
@@ -218,11 +218,31 @@ const homeone = () => (
           </span>
         </div>
       </div>
-    </section>
+    </section> */}
 
-    <section id="about" className="container scroll-set no-bottom">
+    <section
+      id="about"
+      className="container scroll-set no-bottom position-relative"
+    >
       <div className="spacer-double"></div>
       <div className="row">
+        <div className="col">
+          <div className="px-0 col-12 col-lg-6">
+            <h2 className="lh-sm text-capitalize">WHY JOIN WTMC:</h2>
+            <p>
+              WTMC is collection of 10,000 Alien NFTs -- unique digital
+              collectibles living on the Ethereum blockchain. Your alien doubles
+              as your Mars club membership card and grants access to
+              members-only benfits, the first of which is access to THE MOON, an
+              area to roam around and stamp your flag. Future areas and perks
+              can be unlocked by the community through roadmap activation.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="spacer-double"></div>
+
+      <div className="row align-items-center">
         <div className="col">
           <div className="px-0 col-12 col-lg-11">
             <h2>The Specs</h2>
@@ -247,10 +267,10 @@ const homeone = () => (
             </p>
           </div>
         </div>
-        <div className="col-12 col-md-5 col-lg-4 order-first order-md-last mb-3 mb-md-0">
-          <div className="height-1">
+        <div className="col-12 col-md-5 col-lg-4 mt-3 mt-md-0">
+          <div className="height-3">
             <img
-              className="d-block h-100 w-100 rounded-lg shadow-primary"
+              className="d-block h-100 w-100"
               src="./img/items/anim-8.webp"
               alt=".."
             />
@@ -271,11 +291,11 @@ const homeone = () => (
             you.
           </p>
         </div>
-        <ul className="nav row row-cols-2 row-cols-md-3 row-cols-lg-5 text-center gy-4">
+        <ul className="nav row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 text-center gy-4">
           {theClublist.map((item) => (
             <li>
-              <div>
-                <div className=" mx-auto mb-3">
+              <div className="d-flex d-sm-block align-items-center club-c">
+                <div className="height-small mx-auto mb-3">
                   <img
                     className="d-block h-100 w-100"
                     src={`./img/wallet/${item.image}`}
@@ -293,9 +313,12 @@ const homeone = () => (
       </div>
     </section>
 
-    <section id="about" className="container scroll-set no-bottom">
+    <section
+      id="about"
+      className="container scroll-set no-bottom position-relative"
+    >
       <div className="spacer-double"></div>
-      <div className="row">
+      <div className="row align-items-center">
         <div className="col">
           <div className="px-0 col-12 col-lg-11">
             <h2>THE MOON</h2>
@@ -314,7 +337,7 @@ const homeone = () => (
             </p>
           </div>
         </div>
-        <div className="col-12 col-md-5 col-lg-4 order-first order-md-last mb-3 mb-md-0">
+        <div className="col-12 col-md-5 col-lg-4 mt-3 mt-md-0">
           <div className="height-1">
             <img
               className="d-block h-100 w-100 rounded-lg shadow-primary"
@@ -329,11 +352,11 @@ const homeone = () => (
       </div> */}
     </section>
 
-    <section className="container no-top no-bottom">
+    <section className="container no-top no-bottom position-relative">
       <div className="spacer-double">
         <hr />
       </div>
-      <div className="row">
+      <div className="row align-items-center">
         <div className="col">
           <div className="px-0 col-12 col-lg-11">
             <h2 className="lh-sm text-capitalize">
@@ -373,7 +396,7 @@ const homeone = () => (
             </p>
           </div>
         </div>
-        <div className="col-12 col-md-5 col-lg-4 order-first order-md-last mb-3 mb-md-0">
+        <div className="col-12 col-md-5 col-lg-4 mt-3 mt-md-0  ">
           <div className="height-1">
             <img
               className="d-block h-100 w-100 rounded-lg shadow-primary"
@@ -383,7 +406,7 @@ const homeone = () => (
           </div>
         </div>
 
-        {/* <div className="col-12 col-md-5 col-lg-4 order-first order-md-last mb-3 mb-md-0">
+        {/* <div className="col-12 col-md-5 col-lg-4 mt-3 mt-md-0">
           <ul className="nav row row-cols-2 gy-4">
             {nftSmallGallery.map((item) => (
               <li>
@@ -399,22 +422,7 @@ const homeone = () => (
           </ul>
         </div> */}
       </div>
-      <div className="spacer-double"></div>
-      <div className="row">
-        <div className="col">
-          <div className="px-0 col-12 col-lg-6">
-            <h2 className="lh-sm text-capitalize">WHY JOIN WTMC:</h2>
-            <p>
-              WTMC is collection of 10,000 Alien NFTs -- unique digital
-              collectibles living on the Ethereum blockchain. Your alien doubles
-              as your Mars club membership card and grants access to
-              members-only benfits, the first of which is access to THE MOON, an
-              area to roam around and stamp your flag. Future areas and perks
-              can be unlocked by the community through roadmap activation.
-            </p>
-          </div>
-        </div>
-      </div>
+
       <div className="spacer-double"></div>
       <div className="row">
         <div className="col">
@@ -468,21 +476,25 @@ const homeone = () => (
       </div>
     </section>
 
-    <section id="road" className="container scroll-setno-bottom">
+    <section
+      id="road"
+      className="container scroll-setno-bottom position-relative"
+    >
       <div className="spacer-double">
         <hr />
       </div>
-      <div className="px-0 col-12 col-lg-10 col-xl-7">
-        <h2 className="text-capitalize">Roadmap activations</h2>
-        <p>we're in this for the logn haul.</p>
-        <p>
-          we've set up some goalposts for ourselves. Once we hit a targe sell
-          through percentage, we will beging to work on realizing the started
-          goal.
-        </p>
-      </div>
-      <div className="row">
+
+      <div className="row align-items-center">
         <div className="col">
+          <div className="px-0 col-12 col-lg-10 col-xl-7">
+            <h2 className="text-capitalize">Roadmap activations</h2>
+            <p>we're in this for the logn haul.</p>
+            <p>
+              we've set up some goalposts for ourselves. Once we hit a targe
+              sell through percentage, we will beging to work on realizing the
+              started goal.
+            </p>
+          </div>
           <div className="px-0 col-12 col-lg-11">
             <ul className="nav flex-column gap-3 small">
               {roadmapList.map((item) => (
@@ -505,7 +517,7 @@ const homeone = () => (
             </ul>
           </div>
         </div>
-        <div className="col-12 col-md-5 col-lg-4 order-first order-md-last mb-3 mb-md-0">
+        <div className="col-12 col-md-5 col-lg-4 mt-3 mt-md-0">
           <div className="height-1">
             <img
               className="d-block h-100 w-100 rounded-lg shadow-primary"
@@ -595,7 +607,7 @@ const homeone = () => (
       </div>
     </section> */}
 
-    <section id="create" className="container scroll-set">
+    <section id="create" className="container scroll-set position-relative">
       <div className="row">
         <div className="spacer-double"></div>
         <div className="col-lg-12 mb-3">

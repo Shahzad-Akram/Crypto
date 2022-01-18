@@ -4235,13 +4235,19 @@ img.img-rounded {
 
 .height {
   &-1 {
-    height: 350px;
+    height: 470px;
     @media screen and (max-width: 600px) {
-      height: 250px;
+      height: 280px;
     }
   }
   &-2 {
     height: 150px;
+  }
+  &-3 {
+    height: 250px;
+    img {
+      object-fit: contain;
+    }
   }
 }
 
@@ -4251,6 +4257,30 @@ img.img-rounded {
     width: 120px;
     img {
       object-fit: contain;
+    }
+  }
+}
+
+.club-c {
+  .height-small {
+    height: 150px;
+    img {
+      object-fit: contain;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .height-small {
+      height: 95px;
+      width: 120px;
+      margin-right: 15px !important;
+      img {
+        object-fit: contain;
+      }
+    }
+    span {
+      text-align: start;
+      font-size: 0.8rem;
     }
   }
 }

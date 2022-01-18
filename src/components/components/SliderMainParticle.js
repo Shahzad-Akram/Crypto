@@ -113,7 +113,7 @@ const slidermainparticle = () => (
           </div>
         </Reveal>
       </div>
-      <div className="col-md-6 xs-hide">
+      <div className="col-md-6">
         <Reveal
           className="onStep d-inline"
           keyframes={inline}
