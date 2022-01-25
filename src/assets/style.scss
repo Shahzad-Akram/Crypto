@@ -4269,6 +4269,14 @@ img.img-rounded {
     }
   }
 
+  .height-small2 {
+    height: 100px;
+    margin-bottom: 70px !important;
+    img {
+      object-fit: contain;
+    }
+  }
+
   @media screen and (max-width: 575px) {
     .height-small {
       height: 95px;

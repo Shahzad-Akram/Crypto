@@ -120,7 +120,7 @@ const contact = function () {
             </div>
           </div>
 
-          <div className="col-md-4">
+          {/* <div className="col-md-4">
             <div className="padding40 box-rounded mb30">
               <h3>US Office</h3>
               <address className="s1">
@@ -162,7 +162,7 @@ const contact = function () {
                 </span>
               </address>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <Footer />

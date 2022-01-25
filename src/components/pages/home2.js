@@ -112,11 +112,31 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const theClublist = [
-  { image: "11.png" },
-  { image: "22.png" },
-  { image: "33.png" },
-  { image: "44.png" },
-  { image: "55.png" },
+  {
+    image: "11.png",
+    cls: "height-small2",
+    text: "10,000 Provably-rare Alien tokens",
+  },
+  {
+    image: "22.png",
+    cls: "height-small2",
+    text: "For launch, fair distribution All aliens cost0.08 ETH",
+  },
+  {
+    image: "33.png",
+    cls: "height-small2",
+    text: "Ownership and commercial usage rights given to the consumer over their NFT",
+  },
+  {
+    image: "44.png",
+    cls: "height-small",
+    text: "TH MOON - Area to roam around and stamp your flag.",
+  },
+  {
+    image: "55.png",
+    cls: "height-small",
+    text: "The bathroom A member's only graffiti board.",
+  },
 ];
 
 const nftSmallGallery = [
@@ -295,17 +315,14 @@ const homeone = () => (
           {theClublist.map((item) => (
             <li>
               <div className="d-flex d-sm-block align-items-center club-c">
-                <div className="height-small mx-auto mb-3">
+                <div className={`${item.cls} mx-auto mb-3`}>
                   <img
                     className="d-block h-100 w-100"
                     src={`./img/wallet/${item.image}`}
                     alt=".."
                   />
                 </div>
-                <span className="text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Adipisci, fugiat.
-                </span>
+                <span className="text-white">{item.text}</span>
               </div>
             </li>
           ))}
@@ -340,7 +357,7 @@ const homeone = () => (
         <div className="col-12 col-md-5 col-lg-4 mt-3 mt-md-0">
           <div className="height-1">
             <img
-              className="d-block h-100 w-100 rounded-lg shadow-primary"
+              className="d-block h-100  rounded-lg "
               src="./img/wallet/44.png"
               alt=".."
             />
@@ -444,10 +461,9 @@ const homeone = () => (
           <div className="h-100 d-flex flex-column">
             <small className="mt-auto">
               {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam amet reiciendis, ipsa soluta, officiis accusantium
-              quibusdam facilis optio, vitae hic laborum? Vero dolor incidunt
-              quasi suscipit et voluptatem, ipsum eius.
+              Note: Thirty aliens are being withheld from te sale. These will be
+              used for giveaway, puzzle rewards and for the creators BAYC
+              membership.
             </small>
           </div>
         </div>
@@ -520,7 +536,7 @@ const homeone = () => (
         <div className="col-12 col-md-5 col-lg-4 mt-3 mt-md-0">
           <div className="height-1">
             <img
-              className="d-block h-100 w-100 rounded-lg shadow-primary"
+              className="d-block h-100 w-100 rounded-lg "
               src="./img/items/merch.png"
               alt=".."
             />
@@ -551,14 +567,14 @@ const homeone = () => (
           </div>
           <div className="col-12 col-md-5 col-lg-3 mt-3 mt-md-0">
             <ul className="nav flex-column gap-3">
-              <li>
+              {/* <li>
                 <button
                   type="button"
                   className="btn-main py-3 w-100 text-uppercase mx-auto"
                 >
                   Neftexp.io
                 </button>
-              </li>
+              </li> */}
               <li>
                 <button
                   type="button"
